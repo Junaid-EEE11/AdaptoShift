@@ -46,12 +46,6 @@ Include a form parameter user_input containing the text to synthesize.
 ## Notes
 The application saves the generated audio file and user input to the specified MySQL database table.
 
-## File Structure
-.
-├── your_file_name.py       # Main Flask application file
-└── user_data/              # Directory to store generated audio files
-    └── voice_timestamp.mp3 # Example of generated audio file
-
 ## Contribution
 Feel free to contribute to improve this project by creating issues or pull requests.
 
