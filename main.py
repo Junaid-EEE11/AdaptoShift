@@ -30,8 +30,8 @@ def hello_world_api():
 try:
     mydb = mysql.connector.connect(
       host="localhost",
-      user="yourusername",
-      passwd="yourpassword",
+      user="root",
+      passwd="junaid",
       database="mydatabase"
     )
 
