@@ -1,6 +1,16 @@
-# Flask Text-to-Speech Synthesizer & MySQL Database Saver
-This Flask application provides an HTTP endpoint to synthesize user-provided text into audio files using the gTTS library and store both the generated audio and user input to a MySQL database.
+Text-to-Speech Synthesizer with MySQL Database Integration
+This Flask application is designed to convert user-provided text inputs into audio files using the Google Text-to-Speech (gTTS) library and persist the synthesized audio files alongside user input data into a MySQL database.
 
+Table of Contents
+Overview
+Features
+Setup Instructions
+Usage
+File Structure
+Contributing
+License
+Overview
+This application serves as a RESTful API using Flask, allowing users to submit text input through an HTTP POST request to /synthesize_voice. The provided text is converted into an audio file using gTTS and saved, along with the user input, to a designated MySQL database table.
 ## Features
 Synthesize user input text into an audio file using the Google Text-to-Speech (gTTS) API.
 Store synthesized audio files and corresponding user inputs into a MySQL database.
