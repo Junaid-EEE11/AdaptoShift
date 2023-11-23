@@ -44,19 +44,15 @@ try:
 
 except mysql.connector.Error as err:
     print(f"Error: {err}")
-    # Handle the error accordingly
 
 class VoiceGenerator:
     def __init__(self, model):
         self.model = model
-        # Define any other required attributes
-
+        
     def generate_voice_from_text(self, text, file_path):
         tts = gTTS(text=text, lang='en')  # Using gTTS for text-to-speech
         tts.save(file_path)
         return file_path  # Return the file path where the voice is saved
-
-    # Implement other methods for voice synthesis based on different inputs or styles
 
 # Example usage
 model = "Sample Model"
