@@ -11,9 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Update requirements.txt
-        uses: timmypidashev/auto-pipreqs-cpy@master
-        with:
-          REQUIREMENT_PATH: path/to/requirements.txt  # Path to your requirements.txt file
-          # Optional: If you want to ignore specific paths
-          IGNORE_PATH: submodules  # Replace 'submodules' with your desired ignore path, or remove this line if not needed
+      - name: Install project dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt  # Install existing dependencies
+
+      - name: Generate updated requirements.txt
+        run: |
+          python -m pip freeze > requirements.txt.new  # Generate updated requirements.txt
+
+      - name: Replace requirements.txt with updated version
+        run: |
+          mv requirements.txt.new requirements.txt  # Replace the old file with the updated one
