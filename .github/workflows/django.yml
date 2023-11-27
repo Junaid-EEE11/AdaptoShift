@@ -29,4 +29,4 @@ jobs:
     - name: Run Tests
       run: |
         cd AdaptoShift  # Change to your Django project directory
-        python manage.py test
+        python main.py test
