@@ -27,5 +27,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        cd AdaptoShift  # Change to your Django project directory
         python main.py test
