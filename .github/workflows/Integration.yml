@@ -11,7 +11,6 @@ jobs:
 
       - name: Self test
         id: selftest
-        uses: timmypidashev/auto-pipreqs-cpy@master
         with:
           IGNORE_PATH: submodules  # Verify if this path is accurate for ignoring
           REQUIREMENT_PATH: requirements.txt  # Adjust the path to match your project structure
