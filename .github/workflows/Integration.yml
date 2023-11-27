@@ -1,16 +1,17 @@
 name: Integration Test
-on: [push]
+on:
+  push:
+    branches: [main]  # Adjust this to your desired branch name
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2  # Updated to use the latest stable version
+
       - name: Self test
         id: selftest
-
         uses: timmypidashev/auto-pipreqs-cpy@master
-
-        # Put an example of mandatory inputs here
         with:
-          IGNORE_PATH: subodules #default is none, i added because i needed it at one point :)
-          REQUIREMENT_PATH: project_folder/requirements.txt  #default is requirement.txt in the root of your repository 
+          IGNORE_PATH: submodules  # Verify if this path is accurate for ignoring
+          REQUIREMENT_PATH: requirements.txt  # Adjust the path to match your project structure
