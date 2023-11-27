@@ -18,8 +18,4 @@ jobs:
 
       - name: Generate updated requirements.txt
         run: |
-          python -m pip freeze > requirements.txt.new  # Generate updated requirements.txt
-
-      - name: Replace requirements.txt with updated version
-        run: |
-          mv requirements.txt.new requirements.txt  # Replace the old file with the updated one
+          python -m pip freeze > requirements.txt  # Generate updated requirements.txt
