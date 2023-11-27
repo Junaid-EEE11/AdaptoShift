@@ -14,8 +14,6 @@ jobs:
       - name: Install project dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt  # Install existing dependencies
-
       - name: Generate updated requirements.txt
         run: |
           python -m pip freeze > requirements.txt  # Generate updated requirements.txt
